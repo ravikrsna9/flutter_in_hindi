@@ -46,6 +46,14 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
             ListTile(
+              title: new Text('Login Page'),
+              leading: Icon(Icons.email),
+              onTap: () => Navigator.pushNamed(context, '/login'),
+            ),
+            Divider(
+              height: 0.1,
+            ),
+            ListTile(
               title: new Text('Email'),
               leading: Icon(Icons.email),
             ),
@@ -89,7 +97,11 @@ class _HomePageState extends State<HomePage> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
-          BottomNavigationBarItem(icon: Icon(Icons.add), label: 'Add'),
+          BottomNavigationBarItem(
+            
+            icon: Icon(Icons.add),
+            label: 'Login',
+          ),
         ],
         onTap: (int index) {
           setState(() {
